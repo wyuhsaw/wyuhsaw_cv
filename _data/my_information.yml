@@ -3,12 +3,13 @@
 first_name: 'Sergio'
 last_name: 'Ruiz'
 job_title: 'Postdoctoral Researcher'
-age: 29
+age: 31
 #gender: 'Male'
 github_username: 'sruizcarmona'
-address: 'Barcelona, Spain'
+address: 'Melbourne, Australia'
 email: 'sruizcarmona@gmail.com'
-phone: '+34 653770589'
-website: 'http://www.sergioruiz.eu'
+phone: '+61 478759880'
+twitter: '@RuizCSergio'
+website: 'http://www.sergio-ruiz.com'
 nationality: 'Spanish'
 degree: 'PhD in Structure-Based Drug Design'

@@ -55,14 +55,15 @@ permalink: /
             <li><i class="fa fa-github"></i></li>
             <li><i class="fa fa-map-marker"></i></li>
             <li><i class="fa fa-envelope"></i></li>
-            <li><i class="fa fa-phone"></i></li>
+            <!--<li><i class="fa fa-phone"></i></li>-->
+            <li><i class="fa fa-twitter"></i></li>
             <li><i class="fa fa-globe"></i></li>
           </ul>
           <ul style="list-style: none;float: right;">
             <li>{{ site.data.my_information.github_username }}</li>
             <li>{{ site.data.my_information.address }}</li>
             <li>{{ site.data.my_information.email }}</li>
-            <li>{{ site.data.my_information.phone }}</li>
+            <li>{{ site.data.my_information.twitter }}</li>
             <li>{{ site.data.my_information.website }}</li>
           </ul>
         </div>
@@ -99,7 +100,7 @@ permalink: /
             <li>&emsp;&emsp;&emsp;{{ work.company }} ({{ work.location}})&emsp;</li><br>
             <li>&emsp;&emsp;&emsp;{{ work.desc }}</li><br>
 	{% if work.project %}
-            <li>&emsp;&emsp;&emsp;{{ work.project }}</li>
+            <li style= "padding-left: 47px ; text-indent: -47px;">&emsp;&emsp;&emsp;{{ work.project }}</li>
 	{% endif %}
           </ul>
         </div>
@@ -132,7 +133,7 @@ permalink: /
             <li>&emsp;&emsp;&emsp;{{ edu.school }} ({{ edu.location}})&emsp;</li><br>
             <li>&emsp;&emsp;&emsp;{{ edu.supervisor }}</li><br>
         {% if edu.project %}
-            <li>&emsp;&emsp;&emsp;{{ edu.project }}</li><br>
+            <li style= "padding-left: 47px ; text-indent: -47px;">&emsp;&emsp;&emsp;{{ edu.project }}</li><br>
             <li>&emsp;&emsp;&emsp;{{ edu.tasks }}</li><br>
             <li>&emsp;&emsp;&emsp;{{ edu.qualification }}</li>
         {% endif %}
