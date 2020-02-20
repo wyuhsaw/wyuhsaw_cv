@@ -24,6 +24,9 @@ permalink: /
   <!-- Load my custon.css -->
   <link rel="stylesheet" href="/css/custom.css">
 
+  <!-- SRC google fonts -->
+   <link href="https://fonts.googleapis.com/css?family=Roboto+Condensed:300,400,700|Roboto+Slab:100,300,400,700|Roboto:100,300,400,500,700" rel="stylesheet">
+
   <!-- Set page size here: A5, A4 or A3 -->
   <!-- Set also "landscape" if you need -->
   <style>@page { size: A4 }</style>
@@ -69,38 +72,38 @@ permalink: /
         </div>
       </div>
 
-      <div id="summary">
+      <div id="summary" style="padding-top: 10px;">
         <i class="fa fa-info-circle fa-lg"></i> <p class="item">Summary</p>
         <hr>
-        <span style="line-height: 6mm;">{{ site.data.my_summary.summary }}</span>
+        <span style="line-height: 5.3mm; font-size: 4mm; font-family: Roboto, sans-serif;">{{ site.data.my_summary.summary }}</span>
       </div>
 
-      <div id="language" style="display: inline-block;width: 100%;">
-        <i class="fa fa-commenting fa-lg"></i> <p class="item">Language</p>
+      <div id="language" style="display: inline-block;width: 100%; padding-top:15px;">
+        <i class="fa fa-commenting fa-lg"></i> <p class="item">Languages</p>
         <hr>
         {% for lang in site.data.my_language %}
         <div style="width: 50%;float: left;"><span class="arial-rounded"><strong>{{ lang.language }}</strong></span><span class="trebuchet">{{ lang.level }}</span></div>
         {% endfor %}
       </div>
 
-      <div id="work-experience">
+      <div id="work-experience" style="padding-top: 15px;">
         <i class="fa fa-users fa-lg"></i> <p class="item">Work Experience</p>
         <hr>
         {% for work in site.data.my_work %}
 	{% if work.project %}
-        <div style="height: 31mm;">
-        <div style="float: left;height: 31mm;width: 98%;">
+        <div style="height: 24mm;">
+        <div style="float: left;height: 24mm;width: 98%;">
 	{% else %}
         <div style="height: 18mm;">
         <div style="float: left;height: 18mm;width: 98%;">
 	{% endif %}
-	   <ul class="basic_info">
+	   <ul class="cv_item_list">
             <li>&bull;&emsp;<strong>{{ work.fromto}}</strong>&emsp;</li>
             <li>&emsp;<strong>{{ work.title }}</strong>&emsp;</li><br>
             <li>&emsp;&emsp;&emsp;{{ work.company }} ({{ work.location}})&emsp;</li><br>
             <li>&emsp;&emsp;&emsp;{{ work.desc }}</li><br>
 	{% if work.project %}
-            <li style= "padding-left: 47px ; text-indent: -47px;">&emsp;&emsp;&emsp;{{ work.project }}</li>
+            <li>&emsp;&emsp;&emsp;{{ work.keywords }}</li>
 	{% endif %}
           </ul>
         </div>
@@ -116,24 +119,38 @@ permalink: /
   <section class="sheet padding-20mm">
     <article>
 
-      <div id="education">
+      <div id="research">
+        <i class="fa fa-institution fa-lg"></i> <p class="item">Main Publications</p>
+        <hr>
+        <ul>
+          {% for research in site.data.my_research %}
+        	<span class="arial-rounded">&bull;&emsp;<b>{{ research.title }}</b></span><br>
+        	<span class="arial-rounded">{{ research.authors }}</span>
+        	<span class="arial-rounded">({{ research.year }})</span>
+        	<span class="arial-rounded">{{ research.journal }}</span><br>
+            <span class="arial-rounded" style="font-size: 3.7mm; margin-bottom: 10px;"><i>{{ research.comment }}<br></i></span><br>
+          {% endfor%}
+        </ul>
+      </div>
+
+      <div id="education" style="padding-top: 5px;">
         <i class="fa fa-mortar-board fa-lg"></i> <p class="item">Education</p>
         <hr>
         {% for edu in site.data.my_education %}
 	{% if edu.project %}
-        <div style="height: 43mm;">
-        <div style="float: left;height: 43mm;width: 98%;">
+        <div style="height: 36mm;">
+        <div style="float: left;height: 36mm;width: 98%;">
         {% else %}
         <div style="height: 13mm;">
         <div style="float: left;height: 13mm;width: 98%;">
         {% endif %}
-	  <ul class="basic_info">
+	  <ul class="cv_item_list">
             <li>&bull;&emsp;<strong>{{ edu.fromto}}</strong>&emsp;</li>
             <li>&emsp;<strong>{{ edu.degree }}</strong>&emsp;</li><br>
             <li>&emsp;&emsp;&emsp;{{ edu.school }} ({{ edu.location}})&emsp;</li><br>
             <li>&emsp;&emsp;&emsp;{{ edu.supervisor }}</li><br>
         {% if edu.project %}
-            <li style= "padding-left: 47px ; text-indent: -47px;">&emsp;&emsp;&emsp;{{ edu.project }}</li><br>
+            <li>&emsp;&emsp;&emsp;{{ edu.project }}</li><br>
             <li>&emsp;&emsp;&emsp;{{ edu.tasks }}</li><br>
             <li>&emsp;&emsp;&emsp;{{ edu.qualification }}</li>
         {% endif %}
@@ -144,23 +161,7 @@ permalink: /
       </div>
 
 
-      <div id="research">
-        <i class="fa fa-institution fa-lg"></i> <p class="item">Main Publications</p>
-        <hr>
-        <ul>
-          {% for research in site.data.my_research %}
-        	<span class="arial-rounded">&bull;&emsp;<b>{{ research.title }}</b></span><br>
-        	<span class="arial-rounded">{{ research.authors }}</span>
-        	<span class="arial-rounded">({{ research.year }})</span>
-        	<span class="arial-rounded">{{ research.journal }}</span><br>
-        	<span class="arial-rounded" style="font-size: 3.7mm;"><i>{{ research.comment }}</i></span><br>
-          {% endfor%}
-        </ul>
-      </div>
-
-
-
-      <div id="skills">
+      <div id="skills" style="padding-top: 15px;">
         <i class="fa fa-cogs fa-lg"></i> <p class="item">Skills and Training</p>
         <hr>
         <span class="arial-rounded"><strong>Computational Techniques:</strong></span><span class="trebuchet">{{ site.data.my_skills.comput }}</span><br>
@@ -185,7 +186,6 @@ permalink: /
   var _hmt = _hmt || [];
   (function() {
     var hm = document.createElement("script");
-    hm.src = "//hm.baidu.com/hm.js?{{ site.ba.uuid }}";
     var s = document.getElementsByTagName("script")[0];
     s.parentNode.insertBefore(hm, s);
   })();
