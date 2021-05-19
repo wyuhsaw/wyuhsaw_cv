@@ -70,7 +70,7 @@ Aside
 
 ```{r}
  if(params$pdf_mode){
-   cat("View this resume online at https://www.ruizsergio.com/cv/ruizsergio_resume.html")
+   cat("View this resume [online](https://www.ruizsergio.com/cv/ruizsergio_resume.html)")
  } else {
    cat("<i class='fas fa-download'></i> [Download in PDF](https://www.ruizsergio.com/cv/ruizsergio_resume.pdf)")
  }
