@@ -56,7 +56,7 @@ datadrivencv::build_network_logo(CV$entries_data %>% dplyr::filter(section != "N
 if(params$pdf_mode){
   cat("View this CV online at https://www.ruizsergio.com/cv/")
 } else {
-  cat("[<i class='fas fa-download'></i> Download in PDF](https://www.ruizsergio.com/cv/ruizsergio_cv.pdf)")
+  cat("<i class='fas fa-download'></i> [Download in PDF](https://www.ruizsergio.com/cv/ruizsergio_cv.pdf)")
 }
 ```
 
