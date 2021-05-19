@@ -9,11 +9,6 @@
     width: 50%;
 }
 
-/* SRC smaller network */
-#cv_network_viz {
-    height: 250px;
-}
-
 #disclaimer {
     text-align: center;
 }
@@ -193,3 +188,12 @@ h2 {
     content: counter(page) " / 5" ;
   }
 }
+
+/* SRC make cv network viz */ 
+/* SRC smaller network */
+#cv_network_viz {
+    height: 250px;
+    width: 100%;
+    margin-top: -125px;
+}
+
