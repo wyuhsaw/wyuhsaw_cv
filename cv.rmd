@@ -84,7 +84,8 @@ Disclaimer {#disclaimer}
 
 ![photo](img.jpg){#img .img}
 
-Source code available at [github.com/sruizcarmona/](https://github.com/sruizcarmona)
+Source code available at [github.com/sruizcarmona/](https://github.com/sruizcarmona),<br> 
+built with [datadrivencv](http://nickstrayer.me/datadrivencv/) package
 
 Last updated on `r format(Sys.Date(), format="%b %e, %Y")`
 

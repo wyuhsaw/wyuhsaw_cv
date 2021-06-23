@@ -103,7 +103,7 @@ Highly experienced in:
 * data visualization
 * experimental techniques
 
-Recently involved in NGS data analysis and genomics prediction
+Motivated and collaborative, recently involved in NGS data analysis and genomics prediction
 
 <!-- Highly skilled in R, Bash, Python, LaTeX, Perl and SQL -->
 
@@ -111,7 +111,7 @@ Recently involved in NGS data analysis and genomics prediction
 More info {#more-info}
 --------------------------------------------------------------------------------
 
-See full CV at [ruizsergio.com/cv](http://www.ruizsergio.com/cv) for a more complete list of positions, publications and more
+See full CV at [ruizsergio.com/cv](http://www.ruizsergio.com/cv) for a complete list of positions, publications and more
 
 
 Disclaimer {#disclaimer}
