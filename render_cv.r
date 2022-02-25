@@ -11,11 +11,11 @@ rmarkdown::render("cv.rmd",
                   output_file = "cv.html")
 
 # Knit the PDF version to temporary html location
-tmp_html_cv_loc <- fs::file_temp(ext = ".html")
+#tmp_html_cv_loc <- fs::file_temp(ext = ".html")
 rmarkdown::render("cv.rmd",
                   params = list(pdf_mode = TRUE),
-                  output_file = tmp_html_cv_loc)
+                  output_file = "cv_forpdf.html")
 
 # Convert to PDF using Pagedown
-pagedown::chrome_print(input = tmp_html_cv_loc,
+pagedown::chrome_print(input = "cv_forpdf.html",
                        output = "cv.pdf")
