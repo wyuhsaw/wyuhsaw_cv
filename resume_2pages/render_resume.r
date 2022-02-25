@@ -10,12 +10,12 @@ rmarkdown::render("resume.rmd",
                   params = list(pdf_mode = FALSE),
                   output_file = "resume.html")
 
-## Knit the PDF version to temporary html location
-#tmp_html_cv_loc <- fs::file_temp(ext = ".html")
+### Knit the PDF version to temporary html location
+##tmp_html_cv_loc <- fs::file_temp(ext = ".html")
 rmarkdown::render("resume.rmd",
                   params = list(pdf_mode = TRUE),
                   output_file = "resume_forpdf.html")
-
-## Convert to PDF using Pagedown
+#
+### Convert to PDF using Pagedown
 pagedown::chrome_print(input = "resume_forpdf.html",
                        output = "resume.pdf")

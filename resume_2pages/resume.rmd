@@ -70,9 +70,9 @@ Aside
 
 ```{r}
  if(params$pdf_mode){
-   cat("View this resume [online](https://www.ruizsergio.com/cv/ruizsergio_resume.html)")
+   cat("View this resume [online](https://cv.ruizsergio.com)")
  } else {
-   cat("<i class='fas fa-download'></i> [Download in PDF](https://www.ruizsergio.com/cv/ruizsergio_resume.pdf)")
+   cat("<i class='fas fa-download'></i> [Download in PDF](https://cv.ruizsergio.com/resume.pdf)")
  }
 ```
  
@@ -84,7 +84,7 @@ CV %>% print_contact_info()
 ```
 
 
-Programming Skills {#skills}
+<i class="fa fa-code"></i> Programming {#skills}
 --------------------------------------------------------------------------------
 
 ```{r}
@@ -93,27 +93,28 @@ CV %>% print_skill_bars()
 ```
 
 
-Other Skills {#open-source}
+<i class="fa fa-bolt"></i> Other Skills {#open-source}
 --------------------------------------------------------------------------------
 
 Highly experienced in:
 
-* Computational biology and drug design
-* Bioinformatics and biostatistics
-* Machine Learning
-* Data visualization
-* Experimental techniques
+* <li class="bullet">Computational biology and drug design</li>
+* <li class="bullet">Bioinformatics and biostatistics</li>
+* <li class="bullet">Machine Learning</li>
+* <li class="bullet">Data visualization</li>
+* <li class="bullet">Experimental techniques</li>
 
 Motivated and <strong>collaborative</strong>, recently involved in <strong>Machine Learning</strong>, NGS data analysis, <strong>UK Biobank</strong> and genomics prediction
 
 <!-- Highly skilled in R, Bash, Python, LaTeX, Perl and SQL -->
 
 
-More info {#more-info}
+<i class="fa fa-info-circle"></i> More info {#more-info}
 --------------------------------------------------------------------------------
 
-See full CV at [ruizsergio.com/cv](http://www.ruizsergio.com/cv) for a complete list of positions, publications and more
+See full CV at [cv.ruizsergio.com](http://cv.ruizsergio.com/full) for a complete list of positions, publications and more
 
+<br>
 <br>
 
 <strong>Reference contact details provided upon request </strong>
@@ -125,7 +126,7 @@ Disclaimer {#disclaimer}
 
 Source code available in [github](https://github.com/sruizcarmona/sergioruiz_cv)
 
-Last updated on `r format(Sys.Date(), format="%b %e, %Y")`
+Last updated in `r format(Sys.Date(), format="%b, %Y")`
 
 
 Main
@@ -172,31 +173,66 @@ Outreach and other activities {data-icon=comments}
 CV %<>% print_section('about_me_press')
 ```
 
-::: aside
-```{r}
-CV %<>% print_text_block('resume_aside_1')
-```
-:::
+<!-- ::: aside -->
+<!-- ```{r} -->
+<!-- CV %<>% print_text_block('resume_aside_1') -->
+<!-- ``` -->
+<!-- ::: -->
 
 Main Scientific Output {data-icon=book}
 --------------------------------------------------------------------------------
 
-::: aside
-```{r}
-CV %<>% print_text_block('resume_aside_2')
-```
-:::
+<!-- ::: aside -->
+<!-- ```{r} -->
+<!-- CV %<>% print_text_block('resume_aside_2') -->
+<!-- ``` -->
+<!-- ::: -->
 
 ```{r}
 CV %<>% print_section('scicomms')
 ```
 
 
+Aside2 {.aside #aside2}
+================================================================================
+
+<br> 
+<br> 
+
+<i class="fa fa-wrench"></i> Everyday toolbox
+--------------------------------------------------------------------------------
+
+* <li class="bullet">RStudio</li>
+* <li class="bullet">Data viz & Shiny dashboards</li>
+* <li class="bullet">Bash, ssh & GitHub (local or HPC)</li>
+* <li class="bullet">ML optimization (genetic algorithms, MC, ...)</li>
+* <li class="bullet">Linear models & random forests</li>
+
+<i class="fa fa-link"></i> Web {#aside-2-text-1}
+--------------------------------------------------------------------------------
+
+```{r}
+CV %<>% print_text_block('scicomms_aside')
+```
+
+<br> 
+
+---
+
+<i class="fa fa-commenting center"></i>
+--------------------------------------------------------------------------------
+
+```{r}
+CV %<>% print_text_block('resume_aside_1')
+```
 
 
+<i class="fa fa-users center"></i>
+--------------------------------------------------------------------------------
 
-
-
+```{r}
+CV %<>% print_text_block('resume_aside_2')
+```
 
 
 
