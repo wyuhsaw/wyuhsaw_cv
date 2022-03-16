@@ -93,7 +93,7 @@ CV %>% print_skill_bars()
 ```
 
 
-<i class="fa fa-bolt"></i> Other Skills {#open-source}
+<i class="fa fa-bolt"></i> Highlights {#open-source}
 --------------------------------------------------------------------------------
 
 Highly experienced in:
