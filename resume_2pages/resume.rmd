@@ -44,6 +44,7 @@ CV$entries_data <- CV$entries_data %>%
     section = case_when(
       section %in% c('research_positions', 'teaching_positions') ~ 'positions', 
       section %in% c('academic_articles', 'scientific_comms') ~ 'scicomms',
+      section == 'about_me_press' ~ 'outreach',
       TRUE ~ section
     )
   ) 
@@ -62,9 +63,11 @@ Aside
 ================================================================================
 
 ```{r}
- # Build interactive network of positions colored by section
- # and connected if they occurred in the same year
- datadrivencv::build_network_logo(CV$entries_data %>% dplyr::filter(section != "N/A" & section != "skills_and_training"))
+# Build interactive network of positions colored by section
+# and connected if they occurred in the same year
+datadrivencv::build_network_logo(CV$entries_data %>% dplyr::filter(section != "N/A" & section != "skills_and_training"),
+                                 angle=-30, rx=100, ry=150,
+                                 vb1=35, vb2=10, vb3=10, vb4=170)
 ```
 
 
@@ -170,7 +173,7 @@ Outreach and other activities {data-icon=comments}
 --------------------------------------------------------------------------------
 
 ```{r}
-CV %<>% print_section('about_me_press')
+CV %<>% print_section('outreach')
 ```
 
 <!-- ::: aside -->
