@@ -54,7 +54,11 @@ Aside
 # and connected if they occurred in the same year
 datadrivencv::build_network_logo(CV$entries_data %>%
                                    dplyr::filter(section != "N/A" &
-                                                   section != "skills_and_training"))
+                                                   section != "skills_and_training"),
+                                 angle=220,
+                                 # rx=100, ry=150,
+                                 vb1=70, vb2=-60, vb3=100, vb4=400
+                                 )
 ```
 
 
