@@ -1,6 +1,6 @@
 ---
-title: "Sergio Ruiz-Carmona's CV"
-author: Sergio Ruiz-Carmona
+title: "Woei-Yuh Saw's CV"
+author: Woei-Yuh Saw
 date: "`r Sys.Date()`"
 params:
   pdf_mode:
@@ -22,13 +22,13 @@ source("cv_printing_functions.r")
 
 # Read in all data and initialize a CV printer object
 if(file.exists("cv.rda")) {
-  load("cv.rda")
+  #load("cv.rda")
 } else {
   CV <- create_CV_object(
-    data_location = "https://docs.google.com/spreadsheets/d/1D_MQxoi1XXoQLWSI3mH1Qo6tkctnENAij0-d3BEohu0",  
+    data_location = "https://docs.google.com/spreadsheets/d/1V_6yoRtnpjIyvZIR3QaAmSptioH7hEwy7-JVLFdK6VI",  
     pdf_mode = params$pdf_mode
   )
-  save(CV, file="cv.rda")
+  #save(CV, file="cv.rda")
 }
 ```
 
@@ -55,27 +55,28 @@ Aside
 datadrivencv::build_network_logo(CV$entries_data %>%
                                    dplyr::filter(section != "N/A" &
                                                    section != "skills_and_training"),
-                                 angle=220,
+                                 angle=200,
                                  # rx=100, ry=150,
-                                 vb1=70, vb2=-60, vb3=100, vb4=400
+                                 vb1=60, vb2=-10, vb3=100, vb4=400
                                  )
 ```
 
 
 ```{r}
-if(params$pdf_mode){
-  cat("View this CV [online](https://cv.ruizsergio.com/full)")
-} else {
-  cat("<i class='fas fa-download'></i> [Download in PDF](https://cv.ruizsergio.com/full.pdf)")
-}
+#if(params$pdf_mode){
+#  cat("View this CV [online]")
+#} else {
+#  cat("<i class='fas fa-download'></i> [Download in PDF]")
+#}
 ```
 
-Contact {#contact}
+Contact INFO {#contact}
 --------------------------------------------------------------------------------
 
 ```{r}
 CV %>% print_contact_info()
 ```
+
 
 
 <i class="fa fa-code"></i> Programming {#skills}
@@ -95,19 +96,16 @@ Disclaimer {#disclaimer}
 ![photo](img.jpg){#img .img}
 
 
-Source code in [github](https://github.com/sruizcarmona/sergioruiz_cv),<br>
+Source code in [github](https://github.com/wyuhsaw/wyuhsaw_cv),<br>
 built with [datadrivencv](http://nickstrayer.me/datadrivencv/) package
 
 Last updated in `r format(Sys.Date(), format="%b, %Y")`
 
 
-
-
-
 Main
 ================================================================================
 
-Sergio Ruiz-Carmona {#title}
+Woei-Yuh Saw {#title}
 --------------------------------------------------------------------------------
 
 ```{r}
@@ -131,11 +129,24 @@ Research Experience {data-icon=laptop}
 CV %<>% print_section('research_positions')
 ```
 
-::: aside 
-```{r} 
-CV %<>% print_text_block('research_experience_aside') 
-``` 
-::: 
+
+
+Teaching Experience {data-icon=laptop}
+--------------------------------------------------------------------------------
+
+```{r}
+CV %<>% print_section('teaching_experience')
+```
+
+
+Service Experience {data-icon=laptop}
+--------------------------------------------------------------------------------
+
+```{r}
+CV %<>% print_section('service_experience')
+```
+
+
 
 Skills and Training {data-icon=cogs  data-concise=true}
 --------------------------------------------------------------------------------
@@ -144,9 +155,21 @@ Skills and Training {data-icon=cogs  data-concise=true}
 CV %<>% print_section('skills_and_training')
 ```
 
-\newpage
+Scientific Communications {data-icon=chalkboard-teacher data-concise=true}
+--------------------------------------------------------------------------------
 
-Selected Publications {.pagetop data-icon=book}
+::: aside
+```{r}
+CV %<>% print_text_block('scicomms_aside')
+```
+:::
+
+```{r}
+CV %<>% print_section('conference_presentations')
+```
+
+
+Publications {data-icon=book}
 --------------------------------------------------------------------------------
 
 ::: aside 
@@ -159,53 +182,5 @@ CV %<>% print_text_block('publications_aside')
 CV %<>% print_section('academic_articles')
 ```
 
-::: aside
-```{r}
-CV %<>% print_text_block('teaching_experience_aside')
-```
-:::
-
-Teaching Experience {data-icon=university data-concise=true}
---------------------------------------------------------------------------------
-
-```{r}
-CV %<>% print_section('teaching_positions')
-```
-
-\newpage
-
-Scientific Communications {data-icon=chalkboard-teacher .pagetop data-concise=true}
---------------------------------------------------------------------------------
-
-::: aside
-```{r}
-CV %<>% print_text_block('scicomms_aside')
-```
-:::
-
-```{r}
-CV %<>% print_section('scientific_comms')
-```
-
-
-Data Science Writing {data-icon=chart-line data-concise=true}
---------------------------------------------------------------------------------
-
-```{r}
-CV %<>% print_section('data_science_writings')
-```
-
-
-Selected Press Stories {data-icon=newspaper}
---------------------------------------------------------------------------------
-
-```{r}
-CV %<>% print_section('about_me_press')
-```
-
-
-```{r}
-CV %<>% print_links()
-```
 
 
